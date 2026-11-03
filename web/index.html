@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="th">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#134c3e"><meta name="description" content="ฝึกอัลกอริทึมให้เป็นเกม ผ่านด่าน Bubble Sort, Stack และ Queue พร้อมสถิติและอันดับ"><title>Algorithm Arena — Play. Learn. Level up.</title><link rel="icon" href="/favicon.svg"><link rel="stylesheet" href="/style.css"><script defer src="/visualizer.js"></script><script defer src="/app.js"></script></head>
+<body>
+<a class="skip" href="#main">ข้ามไปเนื้อหา</a>
+<aside class="sidebar">
+ <a class="brand" href="#home"><span class="brand-mark">A<span>↗</span></span><span>algorithm<span class="brand-sub">ARENA / CS PLAYGROUND</span></span></a>
+ <div class="nav-label">YOUR PLAYGROUND</div>
+ <nav aria-label="เมนูหลัก"><a href="#home" data-nav="home"><span>◫</span> ภาพรวม</a><a href="#arena" data-nav="arena"><span>⌘</span> เลือกสนาม <b>15</b></a><a href="#leaderboard" data-nav="leaderboard"><span>♜</span> ตารางคะแนน</a><a href="#history" data-nav="history"><span>◷</span> ประวัติการเล่น</a></nav>
+ <div class="side-bottom"><div class="side-tip"><span class="tiny-tag">SMALL STEPS. BIG SKILLS.</span><p>ไม่ต้องเก่งก่อนเริ่ม<br>แค่เริ่ม แล้วเก่งขึ้นทีละด่าน</p><span class="tip-line">{ practice makes progress }</span></div><a href="#guide" class="guide-link">ⓘ &nbsp; วิธีเล่นและกติกา <span>↗</span></a><div class="side-foot">BUILT WITH JAVA · POWERED BY YOU</div></div>
+</aside>
+<div class="shell"><header class="topbar"><div><span class="live-dot"></span> THE ALGORITHM PLAYGROUND</div><div id="account"></div></header><main id="main" tabindex="-1"></main><footer class="footer"><span>ALGORITHM ARENA</span><span>Learn the logic. Enjoy the challenge.</span><span>JAVA / OOP PROJECT</span></footer></div>
+<dialog id="auth-dialog"><form id="auth-form"><button type="button" id="close-auth" class="dialog-close" aria-label="ปิด">×</button><div class="eyebrow">JOIN THE ARENA</div><h2 id="auth-title">กลับเข้าสู่สนาม</h2><p id="auth-description" class="muted">เข้าสู่ระบบเพื่อเล่นและบันทึกสถิติของคุณ</p><label for="username">ชื่อผู้ใช้</label><input id="username" name="username" required minlength="3" maxlength="24" pattern="[a-zA-Z0-9_]+" autocomplete="username" placeholder="เช่น cs_player"><small>a–z, 0–9 หรือ _ จำนวน 3–24 ตัว</small><label for="password">รหัสผ่าน</label><input id="password" name="password" type="password" required minlength="8" maxlength="128" autocomplete="current-password" placeholder="อย่างน้อย 8 ตัวอักษร"><p id="auth-error" class="error" role="alert"></p><button type="submit" id="auth-submit" class="btn primary full">เข้าสู่ระบบ ↗</button><button type="button" id="auth-toggle" class="text-button full">ยังไม่มีบัญชี? สมัครสมาชิก</button></form></dialog>
+<div id="toast" role="status" aria-live="polite"></div>
+</body></html>

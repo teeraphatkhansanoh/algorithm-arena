@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: algorithm-arena
+    runtime: docker
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: HOST
+        value: 0.0.0.0
+      - key: COOKIE_SECURE
+        value: "true"
+      - key: REQUIRE_POSTGRES
+        value: "true"
+      - key: JDBC_DATABASE_URL
+        sync: false
+      - key: DB_USER
+        sync: false
+      - key: DB_PASSWORD
+        sync: false
