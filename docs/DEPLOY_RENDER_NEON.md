@@ -25,7 +25,7 @@
 
 | ชื่อ | ค่า |
 |---|---|
-| JDBC_DATABASE_URL | jdbc:postgresql://HOST/DATABASE?sslmode=verify-full&connectTimeout=15&socketTimeout=30 |
+| JDBC_DATABASE_URL | jdbc:postgresql://HOST/DATABASE?sslmode=verify-full&sslfactory=org.postgresql.ssl.DefaultJavaSSLFactory&channelBinding=require&connectTimeout=15&socketTimeout=30 |
 | DB_USER | ชื่อผู้ใช้ฐานข้อมูลจาก Neon |
 | DB_PASSWORD | รหัสผ่านฐานข้อมูลจาก Neon |
 | HOST | 0.0.0.0 |
@@ -34,6 +34,7 @@
 
 แทน HOST และ DATABASE ด้วยค่าจริง ไม่ใส่ชื่อผู้ใช้หรือรหัสผ่านใน JDBC_DATABASE_URL
 ไม่ใช้ URL ที่เริ่ม postgresql:// โดยตรง ต้องเริ่ม jdbc:postgresql://
+sslfactory ใช้ truststore มาตรฐานของ Java ตรวจใบรับรอง โดย verify-full ตรวจชื่อเซิร์ฟเวอร์ด้วย
 ไม่ต้องตั้ง PORT เอง Render จะกำหนดให้
 Dockerfile ตั้งค่าที่ไม่ใช่ความลับไว้แล้ว และ REQUIRE_POSTGRES ป้องกันเผลอใช้ H2 บนพื้นที่ชั่วคราว
 
